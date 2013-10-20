@@ -10,6 +10,8 @@ gem 'jbuilder'
 
 gem 'bcrypt-ruby', '~> 3.0.0'
 
+gem 'activerecord-session_store', github: 'rails/activerecord-session_store'
+
 group :development, :test do
   gem 'sqlite3'
   gem 'rspec-rails'
