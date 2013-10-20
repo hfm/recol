@@ -1,6 +1,6 @@
 <%= link_to "Back", users_path %>
 <h2><%= label :user_nickname, current_user.nickname %></h2>
 	<% if current_user %>
-		<%= image_tag(current_user.image, :size => "40x40") %>
+		<%= image_tag(current_user.image, :size => "80x80") %>
 		<%= label :user_location, current_user.location %>
 	<% end %>
