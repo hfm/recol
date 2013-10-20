@@ -10,7 +10,9 @@
 	<header>
 		<h1>Recol</h1>
 		<% if current_user %>
-		  <%= link_to current_user.name, current_user %>
+			<%= label :nickname, current_user.nickname %>のダッシュボード
+			<%= label :country, current_user.country %>
+			<%= label :city, current_user.city %>
 		  <%= link_to "Sign out", signout_path %>
 		<% end %>
 	</header>
