@@ -10,7 +10,8 @@
 	<header>
 		<h1>Recol</h1>
 		<% if current_user %>
-			<%= label :nickname, current_user.nickname %>のダッシュボード
+			<%= image_tag(current_user.image, :size => "20x20") %>
+			<%= label :nickname, current_user.nickname %>
 			<%= label :country, current_user.country %>
 			<%= label :city, current_user.city %>
 		  <%= link_to "Sign out", signout_path %>
@@ -18,6 +19,8 @@
 	</header>
 
 <%= yield %>
-
+	<footer>
+		Copyrights Rocol All Rights Reserved.
+	</footer>
 </body>
 </html>

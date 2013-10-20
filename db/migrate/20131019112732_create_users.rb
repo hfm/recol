@@ -6,6 +6,7 @@ class CreateUsers < ActiveRecord::Migration
       t.string :name
       t.string :info
       t.string :nickname
+      t.string :image
       t.string :token
       t.string :country
       t.string :city
