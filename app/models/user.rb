@@ -1,19 +1,19 @@
 class User < ActiveRecord::Base
-  has_secure_password
-  validates :username, presence: true, length: { maximum: 50 }
-  validates :password_confirmation, presence: true
-  validates :password, length: { minimum: 6 }
-
-  def self.find_by_provider_and_uid(auth)
+  def self.find_by_omniauth(auth)
+  	self.find_by(provider: auth["provider"])
     self.find_by(uid: auth["uid"])
-    self.find_by(provider: auth["provider"])
+    self.find_by(name: auth["info"]["name"])
+    self.find_by(nickname: auth["info"]["nickname"])
+    self.find_by(token: auth["info"]["token"])
   end
 
   def self.create_with_omniauth(auth)
     create!do |user|
       user.provider = auth["provider"]
       user.uid = auth["uid"]
-      user.name = auth["user_info"]["name"]
+      user.name = auth["info"]["name"]
+      user.nickname = auth["info"]["nickname"]
+      user.token = auth["info"]["token"]
     end
   end
 end
