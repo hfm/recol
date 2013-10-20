@@ -7,9 +7,8 @@ class CreateUsers < ActiveRecord::Migration
       t.string :info
       t.string :nickname
       t.string :image
+      t.string :location
       t.string :token
-      t.string :country
-      t.string :city
 
       t.timestamps
     end

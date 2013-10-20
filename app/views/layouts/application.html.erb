@@ -10,10 +10,9 @@
 	<header>
 		<h1>Recol</h1>
 		<% if current_user %>
-			<%= image_tag(current_user.image, :size => "20x20") %>
-			<%= label :nickname, current_user.nickname %>
-			<%= label :country, current_user.country %>
-			<%= label :city, current_user.city %>
+			<%= link_to image_tag(current_user.image, :size => "20x20"), user_path(current_user) %>
+			<%= link_to current_user.nickname, user_path(current_user) %>
+			<%= label :user_location, current_user.location %>
 		  <%= link_to "Sign out", signout_path %>
 		<% end %>
 	</header>
