@@ -13,8 +13,4 @@ class CreateUsers < ActiveRecord::Migration
       t.timestamps
     end
   end
-
-  def self.find_by_omniauth
-    add_index "users", ["provider", "uid"], :name => "index_on_provider_and_uid"
-  end
 end
