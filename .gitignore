@@ -12,3 +12,4 @@
 /spec/tmp/*
 **.orig
 config/initializers/secret_token.rb
+config/initializers/omniauth.rb

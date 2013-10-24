@@ -7,6 +7,8 @@ gem 'coffee-rails'
 gem 'jquery-rails'
 gem 'turbolinks'
 gem 'jbuilder'
+gem 'omniauth'
+gem 'omniauth-soundcloud'
 
 gem 'bcrypt-ruby', '~> 3.0.0'
 
